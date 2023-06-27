@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `actor` (
   PRIMARY KEY (`id_actor`),
   UNIQUE KEY `id_person` (`id_person`),
   CONSTRAINT `actor_ibfk_1` FOREIGN KEY (`id_person`) REFERENCES `person` (`id_person`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Listage des données de la table cinema.actor : ~11 rows (environ)
 /*!40000 ALTER TABLE `actor` DISABLE KEYS */;
@@ -39,7 +39,8 @@ INSERT INTO `actor` (`id_actor`, `id_person`) VALUES
 	(8, 8),
 	(9, 9),
 	(10, 10),
-	(11, 11);
+	(11, 11),
+	(12, 16);
 /*!40000 ALTER TABLE `actor` ENABLE KEYS */;
 
 -- Listage de la structure de la table cinema. casting
@@ -55,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `casting` (
   CONSTRAINT `casting_ibfk_3` FOREIGN KEY (`id_role`) REFERENCES `role` (`id_role`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
--- Listage des données de la table cinema.casting : ~13 rows (environ)
+-- Listage des données de la table cinema.casting : ~15 rows (environ)
 /*!40000 ALTER TABLE `casting` DISABLE KEYS */;
 INSERT INTO `casting` (`id_movie`, `id_actor`, `id_role`) VALUES
 	(1, 1, 3),
@@ -82,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `director` (
   PRIMARY KEY (`id_director`),
   UNIQUE KEY `id_person` (`id_person`),
   CONSTRAINT `director_ibfk_1` FOREIGN KEY (`id_person`) REFERENCES `person` (`id_person`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Listage des données de la table cinema.director : ~6 rows (environ)
 /*!40000 ALTER TABLE `director` DISABLE KEYS */;
@@ -92,7 +93,8 @@ INSERT INTO `director` (`id_director`, `id_person`) VALUES
 	(3, 12),
 	(2, 13),
 	(4, 14),
-	(5, 15);
+	(5, 15),
+	(7, 17);
 /*!40000 ALTER TABLE `director` ENABLE KEYS */;
 
 -- Listage de la structure de la table cinema. genre
@@ -100,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `genre` (
   `id_genre` int(11) NOT NULL AUTO_INCREMENT,
   `genre_name` varchar(100) COLLATE utf8mb4_bin NOT NULL,
   PRIMARY KEY (`id_genre`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Listage des données de la table cinema.genre : ~7 rows (environ)
 /*!40000 ALTER TABLE `genre` DISABLE KEYS */;
@@ -111,7 +113,8 @@ INSERT INTO `genre` (`id_genre`, `genre_name`) VALUES
 	(4, 'Superhero'),
 	(5, 'Drama'),
 	(6, 'Action'),
-	(7, 'Romance');
+	(7, 'Romance'),
+	(12, 'Horror');
 /*!40000 ALTER TABLE `genre` ENABLE KEYS */;
 
 -- Listage de la structure de la table cinema. movie
@@ -186,7 +189,7 @@ CREATE TABLE IF NOT EXISTS `person` (
   `sex` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL,
   `picture` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   PRIMARY KEY (`id_person`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Listage des données de la table cinema.person : ~15 rows (environ)
 /*!40000 ALTER TABLE `person` DISABLE KEYS */;
@@ -205,7 +208,9 @@ INSERT INTO `person` (`id_person`, `name`, `first_name`, `date_of_birth`, `sex`,
 	(12, 'BURTON', 'Tim', '1958-08-25', 'M', NULL),
 	(13, 'NOLAN', 'Christopher', '1970-07-30', 'M', NULL),
 	(14, 'REEVES', 'Matt', '1966-04-27', 'M', NULL),
-	(15, 'YATES', 'David', '1963-10-08', 'M', NULL);
+	(15, 'YATES', 'David', '1963-10-08', 'M', NULL),
+	(16, 'DICAPRIO', 'Leonardo', '1974-11-11', 'M', NULL),
+	(17, 'KUBRICK', 'Stanley', '1928-07-26', 'M', NULL);
 /*!40000 ALTER TABLE `person` ENABLE KEYS */;
 
 -- Listage de la structure de la table cinema. role
@@ -213,9 +218,9 @@ CREATE TABLE IF NOT EXISTS `role` (
   `id_role` int(11) NOT NULL AUTO_INCREMENT,
   `role_name` varchar(100) COLLATE utf8mb4_bin NOT NULL,
   PRIMARY KEY (`id_role`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
--- Listage des données de la table cinema.role : ~10 rows (environ)
+-- Listage des données de la table cinema.role : ~12 rows (environ)
 /*!40000 ALTER TABLE `role` DISABLE KEYS */;
 INSERT INTO `role` (`id_role`, `role_name`) VALUES
 	(1, 'Batman'),
@@ -229,7 +234,8 @@ INSERT INTO `role` (`id_role`, `role_name`) VALUES
 	(9, 'Red Queen'),
 	(10, 'Raoul Duke'),
 	(11, 'Alfred Pennyworth'),
-	(12, 'Jabberwock');
+	(12, 'Jabberwock'),
+	(13, 'Arnold Grape');
 /*!40000 ALTER TABLE `role` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
