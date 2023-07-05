@@ -137,11 +137,11 @@ CREATE TABLE IF NOT EXISTS `movie` (
 -- Listage des données de la table cinema.movie : ~9 rows (environ)
 /*!40000 ALTER TABLE `movie` DISABLE KEYS */;
 INSERT INTO `movie` (`id_movie`, `title`, `f_release_date`, `length`, `synopsis`, `rating`, `poster`, `id_director`) VALUES
-	(1, 'The Imaginarium of Doctor Parnassus', '2009-11-11', 122, '', NULL, '64a52af730e026.34900708.jpg', 1),
+	(1, 'The Imaginarium of Doctor Parnassus', '2009-11-11', 122, 'In London, the sideshow troupe of Doctor Parnassus promises the audience a journey to the "Imaginarium", an imaginary world commanded by the mind of Doctor Parnassus, where dreams come true. In the stories that Doctor Parnassus tells to his daughter Valentina, the midget Percy, and his assistant Anton, he claims to have lived for more than one thousand years; However, when he fell in love with a mortal woman, he made a deal with the devil (Mr. Nick), trading his immortality for youth. As part of the bargain, he promised his son or daughter to Mr. Nick on their sixteenth birthday. Valentina is now almost to the doomed age and Doctor Parnassus makes a new bet with Mr. Nick, whoever seduces five souls in the Imaginarium will have Valentina as a prize. Meanwhile the troupe rescues Tony, a young man that was hanged on a bridge by the Russians. Tony was chased until he finds and joins the group. Tony and Valentina fall in love with each other and the jealous Anton discovers that his competition may be a liar.', NULL, '64a52af730e026.34900708.jpg', 1),
 	(2, 'The Dark Knight', '2008-08-13', 152, '', NULL, '64a52b03a3b6a8.97768462.jpg', 2),
 	(3, 'Batman', '1989-09-01', 126, '', NULL, '64a52b3aa18fa1.55325493.jpg', 3),
 	(4, 'Fear and Loathing in Las Vegas', '1998-08-19', 118, '', NULL, '64a52b2c821db1.99243583.jpg', 1),
-	(5, 'The Batman', '2022-03-02', 176, '', NULL, '64a52b718debd5.78655407.jpg', 4),
+	(5, 'The Batman', '2022-03-02', 176, '', NULL, '64a55d29e588e3.15540637.jpg', 4),
 	(6, 'Harry Potter and the Order of the Phoenix', '2007-07-11', 138, '', NULL, '64a52b62cb8288.72065012.jpg', 5),
 	(7, 'Breathe', '2018-11-01', 117, '', NULL, '64a52b7d05eaf3.28058059.jpg', 6),
 	(8, 'Alice in Wonderland', '2010-03-24', 109, '', NULL, '64a52b885093d5.09898348.jpg', 3),
